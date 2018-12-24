@@ -5,11 +5,10 @@
 n = int(input("Введите натуральное число: "))
 
 sum1 = 0
-
-for i in range(n+1):
-    sum1 = sum1 + i
-
 sum2 = n * (n + 1) / 2
+
+for i in range(n + 1):
+    sum1 = sum1 + i
 
 if sum1 == sum2:
     print(f'Равенство верно для {n}')

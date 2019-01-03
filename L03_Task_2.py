@@ -11,15 +11,11 @@ min_item = 0
 max_item = 100
 array = [random.randint(min_item, max_item) for _ in range(SIZE)]
 
-
 array_new = []
 
 for i in range(len(array)):
     if array[i] % 2 == 0:
         array_new.append(i)
 
-
 print(array)
 print(array_new)
-
-

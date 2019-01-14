@@ -15,7 +15,7 @@ def primes_not_sieve(n):
         else:
             lst.append(i)
         i = i + 1
-    return lst
+    return lst [n]
 
 
 def primes_sieve(n):
@@ -34,7 +34,7 @@ def primes_sieve(n):
 
         result = [i for i in sieve if i != 0]
         m = m + 1
-    return result[:n]
+    return result[n]
 
 
 # bash-3.2$ python -m timeit -n 10000 -s "import L04_Task_2" "L04_Task_2.primes_not_sieve(10)"

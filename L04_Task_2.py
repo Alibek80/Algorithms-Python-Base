@@ -15,7 +15,7 @@ def primes_not_sieve(n):
         else:
             lst.append(i)
         i = i + 1
-    return lst [n]
+    return lst[n - 1]
 
 
 def primes_sieve(n):
@@ -34,8 +34,7 @@ def primes_sieve(n):
 
         result = [i for i in sieve if i != 0]
         m = m + 1
-    return result[n]
-
+    return result[n - 1]
 
 # bash-3.2$ python -m timeit -n 10000 -s "import L04_Task_2" "L04_Task_2.primes_not_sieve(10)"
 # 10000 loops, best of 5: 16.2 usec per loop - 10
@@ -77,7 +76,7 @@ def primes_sieve(n):
 #       100    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
 #         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
-cProfile.run('primes_sieve(100)')
+# cProfile.run('primes_sieve(100)')
 # 10
 # ncalls  tottime  percall  cumtime  percall filename:lineno(function)
 # #         1    0.000    0.000    0.000    0.000 <string>:1(<module>)
